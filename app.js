@@ -32,8 +32,14 @@ button.addEventListener('click', function() {
     });
 
     if (checkbox_franquicia.checked){
-        let precio_final = precio_items + precio_envio;
-        alert(`El precio total es: ${precio_final}`);
+        if (precio_items > 200){
+            alert(`El precio de los items supera los USD 200, por lo que no se puede realizar el envío por franquicia`);
+            return;
+        }
+        else{
+            let precio_final = (precio_items * 1.5) + precio_envio;
+            alert(`El precio total es: ${precio_final}`);
+        }
     }
     else if (checkbox_importacion.checked){
         let precio_final = (precio_items * 1.6) + precio_envio;
