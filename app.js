@@ -2,6 +2,18 @@ checkbox_franquicia = document.getElementById('franquicia')
 checkbox_importacion = document.getElementById('importacion')
 button = document.getElementById('button')
 
+checkbox_franquicia.addEventListener('change', function() {
+    if (this.checked) {
+        checkbox_importacion.checked = false;
+    }
+});
+
+checkbox_importacion.addEventListener('change', function() {
+    if (this.checked) {
+        checkbox_franquicia.checked = false;
+    }
+});
+
 button.addEventListener('click', function() {
     let precio_items = parseFloat(document.getElementById('precio').value);
     let precio_envio = parseFloat(document.getElementById('envio').value);
@@ -19,25 +31,13 @@ button.addEventListener('click', function() {
         return;
     }
 
-    checkbox_franquicia.addEventListener('change', function() {
-        if (this.checked) {
-            checkbox_importacion.checked = false;
-        }
-    });
-    
-    checkbox_importacion.addEventListener('change', function() {
-        if (this.checked) {
-            checkbox_franquicia.checked = false;
-        }
-    });
-
     if (checkbox_franquicia.checked){
         if (precio_items > 200){
             alert(`El precio de los items supera los USD 200, por lo que no se puede realizar el envío por franquicia`);
             return;
         }
         else{
-            let precio_final = (precio_items * 1.5) + precio_envio;
+            let precio_final = precio_items + precio_envio;
             alert(`El precio total es: ${precio_final}`);
         }
     }
