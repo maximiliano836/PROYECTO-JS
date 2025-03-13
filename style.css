@@ -1,0 +1,33 @@
+body {
+    display: grid;
+    justify-items: center;
+    background-image: url('https://www.laportadacanada.com/userfiles/images/exportar.jpg');
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 50vw;
+    height: 95vh;
+    background-color: rgba(45, 45, 45, 0.8); 
+    border-radius: 0.5rem; 
+    color: #ffffff;
+    text-shadow: #a6a5a5 1px 1px 3px;
+    font-size: 2vh;
+    padding: .5rem;
+}
+
+
+input, button {
+    border-radius: 10px;
+    max-width: 10vw;
+    max-height: 2vh;
+}
+
+button{
+    max-height: 3vh;
+}
