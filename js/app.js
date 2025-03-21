@@ -21,12 +21,12 @@ button.addEventListener('click', function() {
     console.log(precio_items)
     console.log(precio_envio)
 
-    if (precio_items == 0 || isNaN(precio_items)){
+    if (precio_items === 0 || isNaN(precio_items)){
         alert('Por favor ingrese un precio de los productos');
         return;
     }
 
-    if (precio_envio == 0 || isNaN(precio_envio)){
+    if (precio_envio === 0 || isNaN(precio_envio)){
         alert('Por favor ingrese un precio de envío');
         return;
     }
