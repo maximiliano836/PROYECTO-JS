@@ -7,7 +7,9 @@ body {
 
 .container{
     display: grid;
+    grid-template-rows: 1fr 2fr 1fr  1fr 3fr;
     justify-items: center;
+    align-items: center;
     gap: .5rem;
     text-align: center;
     margin: 0 auto;
@@ -21,13 +23,24 @@ body {
     padding: .5rem;
 }
 
+.form_precio, .form_shipping{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 
 input, button {
     border-radius: 10px;
-    max-width: 10vw;
+    max-width: 8vw;
     max-height: 2vh;
 }
 
 button{
     max-height: 3vh;
+}
+
+.error{
+    color: red;
+    font-size: 3vh;
+    text-shadow: #000000 1px 1px 3px;
 }

@@ -4,35 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto JS - CODERHOUSE</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Calculadora de impuestos - URUGUAY</h1>
-        <h2>Calcula los impuestos que deberás pagar para traer tus compras del exterior</h2>
+        <div>
+            <h1>Calculadora de impuestos - URUGUAY</h1>
+            <h3>Calcula los impuestos que deberás pagar para traer tus compras del exterior</h3>
+        </div>
         
-        <label>Precio total de los productos:</label>
-        <input type="number" id="precio" min="0" required>
-        <label>Precio del envío:</label>
-        <input type="number" id="envio" min="0" required>
-        <label>Tipo de importación:</label>
-        <p>
-            Cuentas con 3 compras al exterior bajo la modalidad de franquicia, en cada una de ellas puedes traer hasta un máximo de USD 200 
-            <br>
-            <br>
-            Si ya utilizaste las 3 compras ó si el valor de los productos supera los USD 200, deberás enviar la compra mediante importación, donde deberás pagar un impuesto del 60% sobre el valor de los productos.
-        </p>
-        <label>
-            <input type="checkbox" id="franquicia" value="Con franquicia">
-            Con franquicia
-        </label>
-        <label>
-            <input type="checkbox" id="importacion" value="Sin franquicia">
-            Sin franquicia
-        </label>
+        <div class="form_precio">
+            <div>
+                <label>Precio total de los productos:</label>
+                <input type="number" id="precio" min="0" required>
+            </div>
+            <div>
+                <label>Precio del envío:</label>
+                <input type="number" id="envio" min="0" required>
+            </div>
+        </div>
+        <div class="form_shipping">
+            <label>Tipo de importación:</label>
+            <div id="tipo_franquicia">
+                <label>
+                    <input type="checkbox" id="franquicia" value="Con franquicia">
+                    Con franquicia
+                </label>
+                <label>
+                    <input type="checkbox" id="importacion" value="Sin franquicia">
+                    Sin franquicia
+                </label>
+            </div>
+        </div>
+
+        <div id="resultado">
+        </div>
+
+        <div>
+            <h3>Presupuestos calculados anteriormente</h3>
+            <ul id="historial-lista"></ul>
+        </div>
+        
         <button type="submit" id="button">Calcular</button>
     </div>
 
-    <script src="/js/app.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>
