@@ -28,6 +28,7 @@ checkbox_importacion.addEventListener('change', function() {
 button.addEventListener('click', function() {
     let precio_items = parseFloat(document.getElementById('precio').value);
     let precio_envio = parseFloat(document.getElementById('envio').value);
+    let precio_final = 0;
 
     console.log(precio_items)
     console.log(precio_envio)
@@ -48,12 +49,12 @@ button.addEventListener('click', function() {
             return;
         }
         else{
-            let precio_final = precio_items + precio_envio;
+            precio_final = precio_items + precio_envio;
             resultado.innerHTML = `<p class="resultado">El precio total es: ${precio_final}</p>`;
         }
     }
     else if (checkbox_importacion.checked){
-        let precio_final = (precio_items * 1.6) + precio_envio;
+        precio_final = (precio_items * 1.6) + precio_envio;
         resultado.innerHTML = `<p class="resultado">El precio total es: ${precio_final}</p>`;
 
     }
@@ -62,7 +63,11 @@ button.addEventListener('click', function() {
         return;
     }
 
-    const historial = JSON.parse(localStorage.getItem('historial')) || [];
+    if (!localStorage.getItem('historial')) {
+        localStorage.setItem('historial', JSON.stringify([]));
+    }
+
+    const historial = JSON.parse(localStorage.getItem('historial'));
     historial.push({
         precio_items,
         precio_envio,
@@ -76,7 +81,7 @@ button.addEventListener('click', function() {
 
 
 function mostrarHistorial() {
-    const historial = JSON.parse(localStorage.getItem('historial')) || [];
+    const historial = JSON.parse(localStorage.getItem('historial'));
     const historialContainer = document.getElementById('historial');
     historialContainer.innerHTML = ''; 
 
@@ -86,7 +91,7 @@ function mostrarHistorial() {
             <p>Fecha: ${entry.fecha}</p>
             <p>Precio de los productos: USD ${entry.precio_items}</p>
             <p>Precio del envío: USD ${entry.precio_envio}</p>
-            <p>Tipo de importación: ${entry.shippingtype}</p>
+            <p>Tipo de envío: ${entry.shippingtype}</p>
             <p>Precio total: USD ${entry.precio_final}</p>
             <hr>
         `;

@@ -44,3 +44,9 @@ button{
     font-size: 3vh;
     text-shadow: #000000 1px 1px 3px;
 }
+
+#historial {
+    max-height: 20vh; 
+    overflow-y: auto; 
+    padding: 1vh; 
+}
