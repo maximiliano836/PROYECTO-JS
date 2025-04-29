@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "P001",
+      "name": "Laptop ASUS ROG Zephyrus G14",
+      "description": "Laptop gamer de alto rendimiento con procesador AMD Ryzen 9 y GPU NVIDIA RTX 4060.",
+      "price": 1999.99,
+      "image_url": "https://dlcdnwebimgs.asus.com/gain/7767BD74-8865-4D61-96F7-94D6412E3E46",
+      "product_url": "https://rog.asus.com/laptops/rog-zephyrus/rog-zephyrus-g14-series/",
+      "stock": 10,
+      "category": "laptops"
+    },
+    {
+      "id": "P002",
+      "name": "iPhone 15 Pro Max",
+      "description": "Smartphone Apple con chip A17 Pro y cámara de 48 MP con zoom óptico 5x.",
+      "price": 1499.99,
+      "image_url": "https://http2.mlstatic.com/D_NQ_NP_912227-MLA71782903150_092023-O.webp",
+      "product_url": "https://www.apple.com/iphone-15-pro/",
+      "stock": 5,
+      "category": "smartphones"
+    },
+    {
+      "id": "P003",
+      "name": "Auriculares Sony WH-1000XM5",
+      "description": "Auriculares inalámbricos con cancelación de ruido líder en la industria y sonido de alta calidad.",
+      "price": 349.99,
+      "image_url": "https://uysonyb2c.vtexassets.com/arquivos/ids/159347-800-800?v=638146740538900000&width=800&height=800&aspect=true",
+      "product_url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm5-b",
+      "stock": 20,
+      "category": "audio"
+    },
+    {
+      "id": "P004",
+      "name": "Monitor LG UltraGear 27\" QHD",
+      "description": "Monitor gaming de 27 pulgadas con resolución QHD, 144Hz y tecnología Nano IPS.",
+      "price": 499.99,
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBjPMJpXNjRnKTWL4cFslfGO0uxURXhy2JkA&s",
+      "product_url": "https://www.lg.com/us/monitors/lg-27gl850-b-gaming-monitor",
+      "stock": 7,
+      "category": "monitors"
+    }
+  ]
+}
